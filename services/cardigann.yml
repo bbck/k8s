@@ -1,0 +1,26 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cardigann
+  labels:
+    run: cardigann
+spec:
+  ports:
+  - port: 5060
+    protocol: TCP
+  selector:
+    run: cardigann
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cardigann
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: cardigann
+          servicePort: 5060

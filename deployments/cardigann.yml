@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: cardigann
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: cardigann
+    spec:
+      containers:
+      - name: cardigann
+        image: bbck/docker-armhf-cardigann
+        args:
+          - server
+          - --port=5060
+          - --debug
+        ports:
+        - containerPort: 5060
+        volumeMounts:
+        - name: cardigann-config
+          mountPath: /.config/cardigann
+      volumes:
+      - name: cardigann-config
+        emptyDir: {}
