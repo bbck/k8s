@@ -1,0 +1,12 @@
+apiVersion: v1
+entries:
+  cardigann:
+  - apiVersion: v1
+    created: 2017-08-06T14:59:59.968943014-04:00
+    description: A proxy server that provides Torznab support for torrent trackers
+    digest: 6dee065b0cea60bb47d836eafbd9681b799b32966e66a5e972027997f5745f73
+    name: cardigann
+    urls:
+    - https://bbck.github.io/k8s/cardigann-0.1.0.tgz
+    version: 0.1.0
+generated: 2017-08-06T14:59:59.968545585-04:00
