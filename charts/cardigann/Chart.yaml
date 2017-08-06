@@ -1,0 +1,4 @@
+apiVersion: v1
+description: A proxy server that provides Torznab support for torrent trackers
+name: cardigann
+version: 0.1.0
